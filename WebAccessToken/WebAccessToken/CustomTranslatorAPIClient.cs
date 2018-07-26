@@ -15,7 +15,7 @@ namespace TextTranslatorSampleCode
 
         /// <summary>
         /// Gets the list of categories that can be assigned to the project.
-        /// </summary>
+        /// </summary> 
         /// <param name="authtoken">Access Token</param>
         public async Task<string> GetCategories(string authtoken)
         {
