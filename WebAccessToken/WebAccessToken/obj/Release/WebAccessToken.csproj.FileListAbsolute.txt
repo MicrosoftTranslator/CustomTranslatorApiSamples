@@ -1,0 +1,111 @@
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\csc.exe
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CSharp.Core.targets
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\System.Collections.Immutable.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\System.Reflection.Metadata.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\vbc.exe
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\VBCSCompiler.exe
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\roslyn\VBCSCompiler.exe.config
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\TextTranslatorSampleCode.dll.config
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\TextTranslatorSampleCode.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\TextTranslatorSampleCode.pdb
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Antlr3.Runtime.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.Web.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.Web.Infrastructure.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Newtonsoft.Json.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Helpers.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Mvc.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Optimization.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Razor.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Deployment.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Razor.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\WebGrease.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.Web.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Helpers.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Mvc.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Optimization.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.Razor.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Deployment.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Razor.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Antlr3.Runtime.pdb
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\bin\Newtonsoft.Json.xml
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\obj\Release\WebAccessToken.csprojResolveAssemblyReference.cache
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\obj\Release\TextTranslatorSampleCode.dll
+\\mt-hub-002\codeshare\Custom Translator MVC Code\WebAccessToken\WebAccessToken\obj\Release\TextTranslatorSampleCode.pdb
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\csc.exe
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\System.Collections.Immutable.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\System.Reflection.Metadata.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\vbc.exe
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\VBCSCompiler.exe
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\roslyn\VBCSCompiler.exe.config
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\TextTranslatorSampleCode.dll.config
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\TextTranslatorSampleCode.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\TextTranslatorSampleCode.pdb
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Antlr3.Runtime.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.Web.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.Web.Infrastructure.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Newtonsoft.Json.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Helpers.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Mvc.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Optimization.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Razor.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Deployment.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Razor.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\WebGrease.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Extensibility.Web.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Helpers.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Mvc.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Optimization.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.Razor.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Deployment.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\System.Web.WebPages.Razor.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Antlr3.Runtime.pdb
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\bin\Newtonsoft.Json.xml
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\obj\Release\TextTranslatorSampleCode.dll
+E:\Drive E\Projects\MTH\Code\Studio API\WebAccessToken\WebAccessToken\obj\Release\TextTranslatorSampleCode.pdb
