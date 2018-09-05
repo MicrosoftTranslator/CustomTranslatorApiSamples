@@ -92,8 +92,8 @@ Now build the code and run it in Visual Studio to verify everything is working
 modified any code other than the changes listed above, the app should show the
 JSON output of supported languages for Custom Translator.
 
-Deploy the MVC App on local IIS
-===============================
+Deploy the MVC App on Local IIS (Optional)
+==========================================
 
 If you prefer to deploy and run the web app on local ISS please follow these
 steps.
