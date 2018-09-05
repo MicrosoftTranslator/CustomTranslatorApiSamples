@@ -1,5 +1,3 @@
-Custom Translator Sample Help
-
 Prerequisites
 =============
 
