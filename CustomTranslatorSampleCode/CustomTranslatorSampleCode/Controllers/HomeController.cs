@@ -18,6 +18,12 @@ namespace CustomTranslatorSampleCode.Controllers
         static string redirectUri = "http://localhost:64179/home/index1"; // Ensure this URL is added to the Redirect URLs section (Platform = Web) for your client app
         static string clientsecret = "nkffvQ27|$cbHOUEPD323*^"; // Enter App Secret for your client app
         static string authorityUri = $"https://login.microsoftonline.com/{tenant}/oauth2/v2.0";  
+=======
+        static string clientID = "..."; // Enter your ClientID that you created in https://apps.dev.microsoft.com 
+        static string redirectUri = "http://localhost/home/index1"; // Ensure this URL is added to the Redirect URLs section (Platform = Web) for your client app
+        static string clientsecret = "..."; // Enter App Secret for your client app
+        static string authorityUri = "https://login.microsoftonline.com/common/oauth2/v2.0";
+>>>>>>> 64ef2757aacf6bb118282ed1e1ff9e19203dcec5:CustomTranslatorSampleCode/Controllers/HomeController.cs
         static string resourceUri = "api://6981666b-e0e0-47d6-a039-35318677bf79/access_as_user"; 
 
         [HttpGet]
