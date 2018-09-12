@@ -1,0 +1,112 @@
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\csc.exe
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\vbc.exe
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\VBCSCompiler.exe
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\CustomTranslatorSampleCode.dll.config
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\CustomTranslatorSampleCode.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\CustomTranslatorSampleCode.pdb
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Antlr3.Runtime.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.Web.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Newtonsoft.Json.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Helpers.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Mvc.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Optimization.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Razor.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.WebPages.Deployment.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.WebPages.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.WebPages.Razor.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\WebGrease.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.Web.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Helpers.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Mvc.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Optimization.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.Razor.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.WebPages.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.WebPages.Deployment.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\System.Web.WebPages.Razor.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Antlr3.Runtime.pdb
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\bin\Newtonsoft.Json.xml
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\obj\Debug\CustomTranslatorSampleCode.csprojResolveAssemblyReference.cache
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\obj\Debug\CustomTranslatorSampleCode.dll
+C:\Users\v-rada\Documents\Test COde\CustomTranslatorSampleCode\obj\Debug\CustomTranslatorSampleCode.pdb
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\csc.exe
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\vbc.exe
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\VBCSCompiler.exe
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\CustomTranslatorSampleCode.dll.config
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\CustomTranslatorSampleCode.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\CustomTranslatorSampleCode.pdb
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Antlr3.Runtime.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.Web.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Newtonsoft.Json.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Helpers.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Mvc.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Optimization.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Razor.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.WebPages.Deployment.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.WebPages.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.WebPages.Razor.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\WebGrease.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Extensibility.Web.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.ApplicationInsights.Web.TelemetryChannel.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Helpers.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Mvc.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Optimization.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.Razor.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.WebPages.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.WebPages.Deployment.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\System.Web.WebPages.Razor.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Antlr3.Runtime.pdb
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\bin\Newtonsoft.Json.xml
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\obj\Debug\CustomTranslatorSampleCode.csprojResolveAssemblyReference.cache
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\obj\Debug\CustomTranslatorSampleCode.dll
+C:\Users\v-rada\Documents\GitHub\CustomTranslatorApiSamples\CustomTranslatorSampleCode\CustomTranslatorSampleCode\obj\Debug\CustomTranslatorSampleCode.pdb
