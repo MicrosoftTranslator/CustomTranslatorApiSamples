@@ -13,6 +13,7 @@ namespace CustomTranslatorSampleCode.Controllers
 
     public class HomeController : Controller
     {
+<<<<<<< HEAD:CustomTranslatorSampleCode/CustomTranslatorSampleCode/Controllers/HomeController.cs
         static string tenant = "common"; // Tenant for Custom Translator
         static string clientID = "1f3472a0-2738-4e9f-9092-19cecb8b8efa"; // Enter your ClientID that you created in https://apps.dev.microsoft.com 
         static string redirectUri = "http://localhost:64179/home/index1"; // Ensure this URL is added to the Redirect URLs section (Platform = Web) for your client app
