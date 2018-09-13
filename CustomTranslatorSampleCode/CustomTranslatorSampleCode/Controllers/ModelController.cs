@@ -76,13 +76,13 @@ namespace CustomTranslatorSampleCode.Controllers
             model.name = "Model2 Aug 31 prod"; // Enter model name
             model.projectId = "f923bde7-c36d-4570-9a67-a8e835bf2cbc"; // Enter project id
             model.documentIds = new List<int>();
-            model.documentIds.Add(62107); // Add multiple documents using DocumentID. DocumentID is int.
+            model.documentIds.Add(62107111); // Add multiple documents using DocumentID. DocumentID is int.
             model.isTuningAuto = true; // Enter if tuning set will be set to auto. values = true, false
             model.isTestingAuto = true; // Enter if testing set will be set to auto. values = true, false
             model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
             model.autoDeployThreshold = 0; // Enter the value of auto deploy threshold value
 
-            string result = await clientapp.GetProject("f923bde7-c36d-4570-9a67-a8e835bf2cbc", token_header);
+            string result = await clientapp.GetProject(model.projectId, token_header);
             Project project = getProjectDetail(result);
 
             result = await clientapp.CreateModel(token_header, model);

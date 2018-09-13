@@ -31,13 +31,13 @@ namespace CustomTranslatorSampleCode.Controllers
 
             // Start upload single parallel document 
 
-            string sourcelanguagefilepath = @"E:\File Upload Files Sample Code Studio\en - de\file2_de.txt"; // Enter local path for source language file
-            string targetlanguagefilepath = @"E:\File Upload Files Sample Code Studio\en - de\file2_en.txt"; // Enter local path for target language file
+            string sourcelanguagefilepath = @"..."; // Enter local path for source language file
+            string targetlanguagefilepath = @"..."; // Enter local path for target language file
 
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
-            documentdetails.DocumentName = "doc aug 30 single files end de "; // Enter document name
+            documentdetails.DocumentName = "Document Name EN DE"; // Enter document name
             documentdetails.DocumentType = "training"; //values = training, tuning, testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();
@@ -87,11 +87,11 @@ namespace CustomTranslatorSampleCode.Controllers
 
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
-            string filepath = @"E:\File Upload Files Sample Code Studio\en - de\ENDEAligned.zip";
+            string filepath = @"..."; // Enter local path for combo file
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
-            documentdetails.DocumentName = "doc combo aug 30"; // Enter document name
+            documentdetails.DocumentName = "Doc combo"; // Enter document name
             documentdetails.DocumentType = "training"; //values = training, tuning, testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();
