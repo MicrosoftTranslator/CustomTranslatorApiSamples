@@ -37,7 +37,7 @@ namespace CustomTranslatorSampleCode.Controllers
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
-            documentdetails.DocumentName = "Document Name EN DE"; // Enter document name
+            documentdetails.DocumentName = "Document EN DE"; // Enter document name
             documentdetails.DocumentType = "training"; //values = training, tuning, testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();
@@ -91,7 +91,7 @@ namespace CustomTranslatorSampleCode.Controllers
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
-            documentdetails.DocumentName = "Doc combo"; // Enter document name
+            documentdetails.DocumentName = "Doc combo EN DE"; // Enter document name
             documentdetails.DocumentType = "training"; //values = training, tuning, testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();

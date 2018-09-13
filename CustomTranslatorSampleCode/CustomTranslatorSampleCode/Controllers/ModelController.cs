@@ -73,7 +73,7 @@ namespace CustomTranslatorSampleCode.Controllers
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
             ModelCreateRequest model = new ModelCreateRequest(); // Create new object for Model and add values
-            model.name = "Model2 Aug 31 prod"; // Enter model name
+            model.name = "EN DA Model 2 "; // Enter model name
             model.projectId = "f923bde7-c36d-4570-9a67-a8e835bf2cbc"; // Enter project id
             model.documentIds = new List<int>();
             model.documentIds.Add(62107111); // Add multiple documents using DocumentID. DocumentID is int.

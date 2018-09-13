@@ -31,9 +31,9 @@ namespace CustomTranslatorSampleCode.Controllers
             newproject.name = "EN to DA Aug 31"; // Enter Project Name
             newproject.languagePairId = 18; //Determined from the call to GetLanguagePairs
             newproject.categoryid = 1; //determined from the call to GetCategories 
-            newproject.categoryDescriptor = "New"; // Enter Project Category Descriptor
+            newproject.categoryDescriptor = "This is category descriptor"; // Enter Project Category Descriptor
             newproject.label = "EN to DA Label"; // Enter Project Label
-            newproject.description = "New Desciption"; // Enter Project Decription
+            newproject.description = "New Description"; // Enter Project Decription
 
             string categoryresult = await clientapp.GetCategories(token_header);
             List<Category> categorylist = getCategoryList(categoryresult);
