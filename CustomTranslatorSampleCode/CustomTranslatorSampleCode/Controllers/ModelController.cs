@@ -73,16 +73,16 @@ namespace CustomTranslatorSampleCode.Controllers
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
             ModelCreateRequest model = new ModelCreateRequest(); // Create new object for Model and add values
-            model.name = "Model2 nov 9 prod"; // Enter model name
-            model.projectId = "876f8588-05bb-4ae3-aa15-6c4d0b96ea85"; // Enter project id
+            model.name = "..."; // Enter model name
+            model.projectId = "..."; // Enter project id
             model.documentIds = new List<int>();
-            model.documentIds.Add(88410); // Add multiple documents using DocumentID. DocumentID is int.
+            model.documentIds.Add(...); // Add multiple documents using DocumentID. DocumentID is int.
             model.isTuningAuto = true; // Enter if tuning set will be set to auto. values = true, false
             model.isTestingAuto = true; // Enter if testing set will be set to auto. values = true, false
             model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
             model.autoDeployThreshold = 0; // Enter the value of auto deploy threshold value
 
-            string result = await clientapp.GetProject("876f8588-05bb-4ae3-aa15-6c4d0b96ea85", token_header);
+            string result = await clientapp.GetProject("model.projectId", token_header);
             Project project = getProjectDetail(result);
 
             result = await clientapp.CreateModel(token_header, model);

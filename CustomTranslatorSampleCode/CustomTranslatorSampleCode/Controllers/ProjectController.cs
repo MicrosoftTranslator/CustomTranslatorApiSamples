@@ -27,20 +27,13 @@ namespace CustomTranslatorSampleCode.Controllers
 
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
-            //string lpresult = await clientapp.GetLanguagePairs(token_header);
-            //List<LanguagePair> languagePairList = getLanguagePairList(lpresult);
-            //LanguagePair languagePair = languagePairList.Find(lp => lp.id == 38);
-
-            //Response.Write("<br/>Language Pair: " + languagePair.sourceLanguage.displayName + " to " + languagePair.targetLanguage.displayName);
-
-
             ProjectCreateRequest newproject = new ProjectCreateRequest();
-            newproject.name = "EN to DA Nov 9 2018"; // Enter Project Name
+            newproject.name = "..."; // Enter Project Name
             newproject.languagePairId = 18; //Determined from the call to GetLanguagePairs
             newproject.categoryid = 1; //determined from the call to GetCategories 
-            newproject.categoryDescriptor = "New"; // Enter Project Category Descriptor
-            newproject.label = "EN to DA Nov 9 2018"; // Enter Project Label
-            newproject.description = "New"; // Enter Project Decription
+            newproject.categoryDescriptor = "..."; // Enter Project Category Descriptor
+            newproject.label = "..."; // Enter Project Label
+            newproject.description = "..."; // Enter Project Decription
 
             string categoryresult = await clientapp.GetCategories(token_header);
             List<Category> categorylist = getCategoryList(categoryresult);
@@ -50,7 +43,7 @@ namespace CustomTranslatorSampleCode.Controllers
             List<LanguagePair> languagePairList = getLanguagePairList(lpresult);
             LanguagePair languagePair = languagePairList.Find(lp => lp.id == newproject.languagePairId);
 
-            string result = await clientapp.CreateProject(token_header, newproject, Session["ws_id"].ToString());  /// add to github 
+            string result = await clientapp.CreateProject(token_header, newproject, Session["ws_id"].ToString()); 
             string[] resultarray = result.Split('/');
 
             if (resultarray.Length > 1)

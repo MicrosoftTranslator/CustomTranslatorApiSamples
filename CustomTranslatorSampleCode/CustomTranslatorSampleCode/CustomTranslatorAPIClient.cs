@@ -62,7 +62,7 @@ namespace CustomTranslatorSampleCode
         /// </summary>
         /// <param name="id">The Id of the requested model.</param>
         /// <param name="authtoken">Access Token.</param>
-        public async Task<string> GetModel(long id, string authtoken) // need testing
+        public async Task<string> GetModel(long id, string authtoken)
         {
             string apipath = $"/api/texttranslator/v1.0/models/{id}";
             string uri = host + apipath;
@@ -109,13 +109,13 @@ namespace CustomTranslatorSampleCode
         /// Example: /api/texttranslator/v1/projects?$orderby= name desc, status asc
         /// </summary>
         /// <param name="authtoken">Access token.</param>
-        /// <param name="workspaceid">The Id of the workspace.</param>   /// add to github
+        /// <param name="workspaceid">The Id of the workspace.</param>
         /// <param name="pageindex">The page index.</param>
         /// <param name="filters">OData $filter parameter</param>
         /// <param name="orderby"></param>
-        public async Task<string> GetProjects(string authtoken, string workspaceid, int pageindex, string filters = "", string orderby = "")   /// add to github
+        public async Task<string> GetProjects(string authtoken, string workspaceid, int pageindex, string filters = "", string orderby = "")
         {
-            string apipath = $"/api/texttranslator/v1.0/projects?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";   /// add to github
+            string apipath = $"/api/texttranslator/v1.0/projects?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";
             string uri = host + apipath;
             RestRequest request = new RestRequest();
             request.AddHeader("Authorization", authtoken);
@@ -188,12 +188,12 @@ namespace CustomTranslatorSampleCode
         /// 
         /// <param name="authtoken">Access token</param>
         /// <param name="pageindex">Index of the page.</param>
-        /// <param name="workspaceid">The Id of the workspace.</param> /// add to github
+        /// <param name="workspaceid">The Id of the workspace.</param>
         /// <param name="filters">Optional parameter to pass standard OData $filter syntax.</param>
         /// <param name="orderby">To sort the returned results please use the standard OData $orderby syntax.</param>
-        public async Task<string> GetDocuments(string authtoken, int pageindex, string workspaceid, string filters = "", string orderby = "")  /// add to github
+        public async Task<string> GetDocuments(string authtoken, int pageindex, string workspaceid, string filters = "", string orderby = "")
         {
-            string apipath = $"/api/texttranslator/v1.0/documents?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";   /// add to github
+            string apipath = $"/api/texttranslator/v1.0/documents?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";
             string uri = host + apipath;
             RestRequest request = new RestRequest();
             request.AddHeader("Authorization", authtoken);
@@ -287,10 +287,10 @@ namespace CustomTranslatorSampleCode
         /// </summary>
         /// <param name="authtoken">Access token.</param>
         /// <param name="newproject">Object containing project details</param>  
-        /// <param name="workspaceid">The Id of the workspace.</param>  /// add to github
-        public async Task<string> CreateProject(string authtoken, ProjectCreateRequest newproject, string workspaceid)  /// add to github
+        /// <param name="workspaceid">The Id of the workspace.</param>
+        public async Task<string> CreateProject(string authtoken, ProjectCreateRequest newproject, string workspaceid)
         {
-            string apipath = $"/api/texttranslator/v1.0/projects?workspaceId={Uri.EscapeUriString(workspaceid)}";  /// add to github
+            string apipath = $"/api/texttranslator/v1.0/projects?workspaceId={Uri.EscapeUriString(workspaceid)}";
             string uri = host + apipath;
             string response = "";
             RestRequest request = new RestRequest();
@@ -324,9 +324,9 @@ namespace CustomTranslatorSampleCode
 
             // Edit the project configuration 
             ProjectEditRequest newproject = new ProjectEditRequest();
-            newproject.name = "Edit Test July 25"; // Enter Project Name
-            newproject.categoryDescriptor = "Test 333"; // Enter Project Category Descriptor
-            newproject.description = "Project Edit July 25"; // Enter Project Decription
+            newproject.name = "..."; // Enter Project Name
+            newproject.categoryDescriptor = "..."; // Enter Project Category Descriptor
+            newproject.description = "..."; // Enter Project Decription
 
             string stringdata = JsonConvert.SerializeObject(newproject, Formatting.Indented); //Serialize the object and convert to required JSON
             StringContent content = new StringContent(stringdata, System.Text.Encoding.UTF8, "application/json-patch+json");
@@ -355,17 +355,17 @@ namespace CustomTranslatorSampleCode
         /// Documents are created asynchronously. Upload status can be checked using the returned job id.
         /// </summary>
         /// <param name="authtoken">Access token.</param>
-        /// <param name="workspaceid">The Id of the workspace.</param>  /// add to github
+        /// <param name="workspaceid">The Id of the workspace.</param>
         /// <param name="sourcelanguagefilepath">Local path for source language file</param>
         /// <param name="targetlanguagefilepath">Local path for target language file</param>
         /// <param name="documentdetails">Object containing details of the document</param>
         /// <param name="sourcelanguagefile">Object containing source language file details</param>
         /// <param name="targetlanguagefile">Object containing target language file details</param>
         /// <returns></returns>
-        public async Task<string> ImportDocument(string authtoken, string workspaceid, string sourcelanguagefilepath, string targetlanguagefilepath, DocumentDetailsForImportRequest documentdetails, FileForImportRequest sourcelanguagefile,FileForImportRequest targetlanguagefile)  /// add to github
+        public async Task<string> ImportDocument(string authtoken, string workspaceid, string sourcelanguagefilepath, string targetlanguagefilepath, DocumentDetailsForImportRequest documentdetails, FileForImportRequest sourcelanguagefile,FileForImportRequest targetlanguagefile)
         {
             string result = "";
-            string apipath = $"/api/texttranslator/v1/documents/import?workspaceId={Uri.EscapeUriString(workspaceid)}";  /// add to github
+            string apipath = $"/api/texttranslator/v1/documents/import?workspaceId={Uri.EscapeUriString(workspaceid)}";
 
             documentdetails.FileDetails.Add(sourcelanguagefile);
             documentdetails.FileDetails.Add(targetlanguagefile);
@@ -409,14 +409,14 @@ namespace CustomTranslatorSampleCode
         /// Documents are created asynchronously. Upload status can be checked using the returned job id.
         /// </summary>
         /// <param name="authtoken">Access token.</param>
-        /// <param name="workspaceid">The Id of the workspace.</param>  /// add to github
+        /// <param name="workspaceid">The Id of the workspace.</param>
         /// <param name="filepath">Local path of the combo file</param>
         /// <param name="documentdetails">Object containing details of the document</param>
         /// <returns></returns>
-        public async Task<string> ImportComboDocument(string authtoken, string workspaceid, string filepath, DocumentDetailsForImportRequest documentdetails)  /// add to github
+        public async Task<string> ImportComboDocument(string authtoken, string workspaceid, string filepath, DocumentDetailsForImportRequest documentdetails)
         {
             string result = "";
-            string apipath = $"/api/texttranslator/v1/documents/import?workspaceId={Uri.EscapeUriString(workspaceid)}";   /// add to github
+            string apipath = $"/api/texttranslator/v1/documents/import?workspaceId={Uri.EscapeUriString(workspaceid)}";
 
             FileForImportRequest combofile = new FileForImportRequest();
             combofile.Name = Path.GetFileName(filepath);
@@ -504,7 +504,7 @@ namespace CustomTranslatorSampleCode
             request.AddHeader("Authorization", authtoken);
 
             ModelEditRequest model = new ModelEditRequest();
-            model.name = "Edit Model May 10"; // Enter model name
+            model.name = "..."; // Enter model name
 
             string response = "";
             try

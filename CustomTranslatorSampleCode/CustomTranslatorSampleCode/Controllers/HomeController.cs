@@ -14,9 +14,9 @@ namespace CustomTranslatorSampleCode.Controllers
     public class HomeController : Controller
     {
         static string tenant = "common"; // Tenant for Custom Translator
-        static string clientID = "1f3472a0-2738-4e9f-9092-19cecb8b8efa"; // Enter your ClientID that you created in https://apps.dev.microsoft.com 
+        static string clientID = "..."; // Enter your ClientID that you created in https://apps.dev.microsoft.com 
         static string redirectUri = "http://localhost:64179/home/index1"; // Ensure this URL is added to the Redirect URLs section (Platform = Web) for your client app
-        static string clientsecret = "nkffvQ27|$cbHOUEPD323*^"; // Enter App Secret for your client app
+        static string clientsecret = "..."; // Enter App Secret for your client app
         static string authorityUri = $"https://login.microsoftonline.com/{tenant}/oauth2/v2.0";  
         static string resourceUri = "api://6981666b-e0e0-47d6-a039-35318677bf79/access_as_user"; 
 
@@ -46,20 +46,16 @@ namespace CustomTranslatorSampleCode.Controllers
             var url = $"{authorityUri}/token";
             string signInReturnUrl = Request.Url.ToString();
             Dictionary<string, string> postData = new Dictionary<string, string> { { "grant_type", "authorization_code" }, { "client_id", clientID }, { "redirect_uri", signInReturnUrl }, { "client_secret", clientsecret }, { "code", activationCode } };
-
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.PostAsync(url, new FormUrlEncodedContent(postData));
             string responseContent = await response.Content.ReadAsStringAsync();
-
-
             JObject responseObj = JsonConvert.DeserializeObject<JObject>(responseContent);
             string tokentype = responseObj["token_type"].Value<string>();
             string accesstoken = responseObj["access_token"].Value<string>();
             string refreshtoken = responseObj["refresh_token"].Value<string>();
             string token_header = tokentype + " " + accesstoken;
-            //Response.Write(token_header);
             Session["token_header"] = token_header;
-            Session["ws_id"] = "61c593a0-bd9e-4c86-a9cd-86cbadbecbf4"; /// Add to github
+            Session["ws_id"] = "..."; // Enter your Workspace Id
 
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
             return View();

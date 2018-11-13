@@ -23,7 +23,7 @@ namespace CustomTranslatorSampleCode
     public class DocumentDetailsForImportRequest
     {
         public string DocumentName { get; set; }
-        public string DocumentType { get; set; } //values = training, tuning, testing
+        public string DocumentType { get; set; } //values = training/ tuning/ testing
         public bool IsParallel { get; set; }
         public List<FileForImportRequest> FileDetails { get; set; }
     }

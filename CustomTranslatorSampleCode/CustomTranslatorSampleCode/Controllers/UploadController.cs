@@ -31,14 +31,14 @@ namespace CustomTranslatorSampleCode.Controllers
 
             // Start upload single parallel document 
 
-            string sourcelanguagefilepath = @"E:\File Upload Files Sample Code Studio\en - de\file2_de.txt"; // Enter local path for source language file
-            string targetlanguagefilepath = @"E:\File Upload Files Sample Code Studio\en - de\file2_en.txt"; // Enter local path for target language file
+            string sourcelanguagefilepath = @"..."; // Enter local path for source language file
+            string targetlanguagefilepath = @"..."; // Enter local path for target language file
 
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
-            documentdetails.DocumentName = "doc aug 30 single files end de "; // Enter document name
-            documentdetails.DocumentType = "training"; //values = training, tuning, testing
+            documentdetails.DocumentName = "..."; // Enter document name
+            documentdetails.DocumentType = "training"; //values = training/ tuning/ testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();
 
@@ -55,7 +55,7 @@ namespace CustomTranslatorSampleCode.Controllers
             targetlanguagefile.Type = "TXT"; // Enter target language file type. Example: TXT
             targetlanguagefile.OverwriteIfExists = true; // Enter if you want to overwrite if file exists. values = true, false
 
-            string result = await clientapp.ImportDocument(token_header, Session["ws_id"].ToString(), sourcelanguagefilepath, targetlanguagefilepath, documentdetails, sourcelanguagefile, targetlanguagefile); /// add to github
+            string result = await clientapp.ImportDocument(token_header, Session["ws_id"].ToString(), sourcelanguagefilepath, targetlanguagefilepath, documentdetails, sourcelanguagefile, targetlanguagefile);
 
 
             string jobId = getJobId(result.Trim());
@@ -87,16 +87,16 @@ namespace CustomTranslatorSampleCode.Controllers
 
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
-            string filepath = @"E:\File Upload Files Sample Code Studio\en - de\ENDEAligned.zip";
+            string filepath = @"..."; // Enter local path for combo file
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
-            documentdetails.DocumentName = "doc combo aug 30"; // Enter document name
-            documentdetails.DocumentType = "training"; //values = training, tuning, testing
+            documentdetails.DocumentName = "..."; // Enter document name
+            documentdetails.DocumentType = "training"; //values = training/ tuning/ testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();
 
-            string result = await clientapp.ImportComboDocument(token_header, Session["ws_id"].ToString(), filepath, documentdetails); /// add to github
+            string result = await clientapp.ImportComboDocument(token_header, Session["ws_id"].ToString(), filepath, documentdetails);
             string jobId = getJobId(result.Trim());
             Response.Write("<br /><br />JobId: " + jobId + "<br />");
 

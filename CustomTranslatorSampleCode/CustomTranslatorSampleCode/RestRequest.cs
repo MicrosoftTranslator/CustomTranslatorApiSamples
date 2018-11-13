@@ -71,7 +71,6 @@ namespace CustomTranslatorSampleCode
 
         public async Task<string> PostRestRequest(string uri, HttpContent content)
         {
-            //string authtoken = "";
             string result = "";
 
             if (!IsAuthTokenSet())
@@ -104,7 +103,6 @@ namespace CustomTranslatorSampleCode
 
         public async Task<string> PutRestRequest(string uri, HttpContent content)
         {
-            //string authtoken = "";
             string result = "";
 
             if (!IsAuthTokenSet())
@@ -126,7 +124,6 @@ namespace CustomTranslatorSampleCode
                     HttpResponseMessage response = await client.PutAsync(uri, content);
                     response.EnsureSuccessStatusCode();
                     result = await response.Content.ReadAsStringAsync();
-                    //result = await GenerateTextResposeForHttpStatusCode(response);
                 }
                 catch (Exception e)
                 {
@@ -138,7 +135,6 @@ namespace CustomTranslatorSampleCode
 
         public async Task<string> DeleteRestRequest(string uri)
         {
-            //string authtoken = "";
             string result = "";
 
             if (!IsAuthTokenSet())
