@@ -210,4 +210,11 @@ namespace CustomTranslatorSampleCode
         public bool isAutoDeploy { get; set; }
         public object autoDeployThreshold { get; set; }
     }
+
+    public class DeploymentConfiguration
+    {
+        public int region { get; set; }
+        public bool isDeployed { get; set; }
+
+    }
 }

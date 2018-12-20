@@ -82,7 +82,7 @@ namespace CustomTranslatorSampleCode.Controllers
             model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
             model.autoDeployThreshold = 0; // Enter the value of auto deploy threshold value
 
-            string result = await clientapp.GetProject("model.projectId", token_header);
+            string result = await clientapp.GetProject(model.projectId, token_header);
             Project project = getProjectDetail(result);
 
             result = await clientapp.CreateModel(token_header, model);
@@ -134,12 +134,31 @@ namespace CustomTranslatorSampleCode.Controllers
 
             long modelid = (long)id;
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
-            string result = await clientapp.CreateModelDeploymentRequest(modelid, "deploy", token_header);
+
+
+            DeploymentConfiguration regionaldeployment1 = new DeploymentConfiguration();
+            regionaldeployment1.region = 1; // North America = 1
+            regionaldeployment1.isDeployed = true; // true = deployment ; false = undeployment
+
+            DeploymentConfiguration regionaldeployment2 = new DeploymentConfiguration();
+            regionaldeployment2.region = 2; // Europe = 2
+            regionaldeployment2.isDeployed = true; // true = deployment ; false = undeployment
+
+            DeploymentConfiguration regionaldeployment3 = new DeploymentConfiguration();
+            regionaldeployment3.region = 3; // Asia Pacific
+            regionaldeployment3.isDeployed = true; // true = deployment ; false = undeployment
+
+            List<DeploymentConfiguration> deploymentconfig = new List<DeploymentConfiguration>();
+            deploymentconfig.Add(regionaldeployment1);
+            deploymentconfig.Add(regionaldeployment2);
+            deploymentconfig.Add(regionaldeployment3);
+
+            string result = await clientapp.CreateModelDeploymentRequest(modelid, deploymentconfig, token_header);
             Response.Write(result);
             return View();
         }
 
-            Project getProjectDetail(string result)
+        Project getProjectDetail(string result)
         {
             Project project = JsonConvert.DeserializeObject<Project>(result);
             return project;

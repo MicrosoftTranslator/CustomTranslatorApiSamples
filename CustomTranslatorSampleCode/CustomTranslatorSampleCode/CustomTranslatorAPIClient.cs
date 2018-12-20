@@ -12,7 +12,19 @@ namespace CustomTranslatorSampleCode
     {
         static string host = "https://custom-api.cognitive.microsofttranslator.com"; // prod
 
-
+        /// <summary>
+        /// Gets the list of workspaces.
+        /// </summary>
+        /// <param name="authtoken">Access Token</param>
+        public async Task<string> GetWorkspaces(string authtoken)
+        {
+            string apipath = "/api/texttranslator/v1.0/workspaces";
+            string uri = host + apipath;
+            RestRequest request = new RestRequest();
+            request.AddHeader("Authorization", authtoken);
+            string response = await request.GetRestRequest(uri);
+            return response;
+        }
 
         /// <summary>
         /// Gets the list of categories that can be assigned to the project.
@@ -465,23 +477,12 @@ namespace CustomTranslatorSampleCode
             RestRequest request = new RestRequest();
             request.AddHeader("Authorization", authtoken);
 
-            //ModelCreateRequest model = new ModelCreateRequest(); // Create new object for Model and add values
-            //model.name = "test Model May 4 prod"; // Enter model name
-            //model.projectId = "eb12ef3b-a122-4d73-8741-802426a0ab7c"; // Enter project id
-            //model.documentIds = new List<int>();
-            //model.documentIds.Add(215); // Add multiple documents using DocumentID. DocumentID is int.
-            //model.isTuningAuto = true; // Enter if tuning set will be set to auto. values = true, false
-            //model.isTestingAuto = true; // Enter if testing set will be set to auto. values = true, false
-            //model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
-            //model.autoDeployThreshold = 0; // Enter the value of auto deploy threshold value
-
             string response = "";
             try
             {
                 string stringdata = JsonConvert.SerializeObject(model, Formatting.Indented);
                 StringContent content = new StringContent(stringdata, System.Text.Encoding.UTF8, "application/json-patch+json");
                 response = await request.PostRestRequest(uri, content);
-                Console.WriteLine(response);
             }
             catch (Exception e)
             {
@@ -525,11 +526,11 @@ namespace CustomTranslatorSampleCode
         /// Deploy or undeploy a model. 
         /// </summary>
         /// <param name="id">The Id of the model to deploy or undeploy.</param>
-        /// <param name="action">The deployment action. Value = deploy/ undeploy</param>
+        /// <param name="deploymentconfig">List of deployment configuration for different region.
         /// <param name="authtoken">Access token.</param>
-        public async Task<string> CreateModelDeploymentRequest(long id, string action, string authtoken)
+        public async Task<string> CreateModelDeploymentRequest(long id, List<DeploymentConfiguration> deploymentconfig, string authtoken)
         {
-            string apipath = $"/api/texttranslator/v1.0/models/{id}/deployment?action={action}";
+            string apipath = $"/api/texttranslator/v1.0/models/{id}/deployment";
 
             string uri = host + apipath;
             RestRequest request = new RestRequest();
@@ -537,29 +538,17 @@ namespace CustomTranslatorSampleCode
 
             StringContent content = null;
             string response = "";
+
             try
             {
+                string stringdata = JsonConvert.SerializeObject(deploymentconfig, Formatting.Indented);
+                content = new StringContent(stringdata, System.Text.Encoding.UTF8, "application/json-patch+json");
                 response = await request.PostRestRequest(uri, content);
             }
             catch (Exception e)
             {
                 response = e.Message + ". " + e.InnerException;
             }
-            return response;
-        }
-
-        /// <summary>
-        /// Deletes a specific model
-        /// </summary>
-        /// <param name="id">The Id of the model to delete.</param>
-        /// <param name="authtoken">Access token.</param>
-        public async Task<string> DeleteModel(long id, string authtoken)
-        {
-            string apipath = $"/api/texttranslator/v1.0/models/{id}";
-            string uri = host + apipath;
-            RestRequest request = new RestRequest();
-            request.AddHeader("Authorization", authtoken);
-            string response = await request.DeleteRestRequest(uri);
             return response;
         }
 
