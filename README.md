@@ -93,7 +93,7 @@ Update the values in your code:
 
 ![Variables](media/d1458ea2a714990ad437a0a09cc89fbd.png)
 
-1.  **session Session["ws_id"]**: update this variable based on your workspace ID.
+4.  **session Session["ws_id"]**: update this variable based on your workspace ID.
 
 ![Workspace](media/f651beb476cce3fe6e48a2841cb6feeb.png)
 
