@@ -90,7 +90,7 @@ In Controllers folder open **HomeController.cs**, and update following code:
 
 ![Workspace](media/f651beb476cce3fe6e48a2841cb6feeb.png)
 
-In Controllers folder open **ModelController.cs**, go to **Create** method and update following code:
+In Controllers folder open **ModelController.cs**, go to **Create()** method and update following code:
 
 1. **model.name**: update this value desired model name.
 2. **model.projectId**: update this value with your project id.
@@ -98,7 +98,7 @@ In Controllers folder open **ModelController.cs**, go to **Create** method and u
 
 ![Workspace](media/model_create.png)
 
-In Controllers folder open **ProjectController.cs**, go to **Index** method and update following code:
+In Controllers folder open **ProjectController.cs**, go to **Index()** method and update following code:
 
 1. **newproject.name**: update this value desired project name.
 2. **newproject.languagePairId**: update this value with appropriate language pair id.
@@ -109,7 +109,7 @@ In Controllers folder open **ProjectController.cs**, go to **Index** method and 
 
 ![Workspace](media/project_index.png)
 
-In Controllers folder open **UploadController.cs**, go to **ParallelFile** method and update following code:
+In Controllers folder open **UploadController.cs**, go to **ParallelFile()** method and update following code:
 
 1. **sourcelanguagefilepath**: update this value of the local path for source language file.
 2. **targetlanguagefilepath**: update this value of the local path for source target file.
@@ -122,7 +122,7 @@ In Controllers folder open **UploadController.cs**, go to **ParallelFile** metho
 
 ![Workspace](media/upload_parallel.png)
 
-In Controllers folder open **UploadController.cs**, go to **ComboFile** method and update following code:
+In Controllers folder open **UploadController.cs**, go to **ComboFile()** method and update following code:
 
 1. **filepath**: update this value of the local path for combo file.
 2. **documentdetails.DocumentName**: update this value with desired document name.
