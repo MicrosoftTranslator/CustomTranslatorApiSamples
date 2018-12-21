@@ -45,14 +45,12 @@ namespace CustomTranslatorSampleCode.Controllers
 
             FileForImportRequest sourcelanguagefile = new FileForImportRequest();
             sourcelanguagefile.Name = Path.GetFileName(sourcelanguagefilepath);
-            sourcelanguagefile.Language = "de"; // Enter source language. Example: de
-            sourcelanguagefile.Type = "TXT"; // Enter source language file type. Example: TXT
+            sourcelanguagefile.Language = "..."; // Enter source language. Example: de. //Determined from the call to GetCategories 
             sourcelanguagefile.OverwriteIfExists = true; // Enter if you want to overwrite if file exists. values = true, false
 
             FileForImportRequest targetlanguagefile = new FileForImportRequest();
             targetlanguagefile.Name = Path.GetFileName(targetlanguagefilepath);
-            targetlanguagefile.Language = "en"; // Enter target language. Example: en
-            targetlanguagefile.Type = "TXT"; // Enter target language file type. Example: TXT
+            targetlanguagefile.Language = "..."; // Enter target language. Example: en. //Determined from the call to GetCategories 
             targetlanguagefile.OverwriteIfExists = true; // Enter if you want to overwrite if file exists. values = true, false
 
             string result = await clientapp.ImportDocument(token_header, Session["ws_id"].ToString(), sourcelanguagefilepath, targetlanguagefilepath, documentdetails, sourcelanguagefile, targetlanguagefile);

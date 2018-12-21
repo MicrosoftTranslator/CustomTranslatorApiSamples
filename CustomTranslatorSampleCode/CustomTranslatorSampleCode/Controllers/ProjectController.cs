@@ -30,7 +30,7 @@ namespace CustomTranslatorSampleCode.Controllers
             ProjectCreateRequest newproject = new ProjectCreateRequest();
             newproject.name = "..."; // Enter Project Name
             newproject.languagePairId = 18; //Determined from the call to GetLanguagePairs
-            newproject.categoryid = 1; //determined from the call to GetCategories 
+            newproject.categoryid = 1; //Determined from the call to GetCategories 
             newproject.categoryDescriptor = "..."; // Enter Project Category Descriptor
             newproject.label = "..."; // Enter Project Label
             newproject.description = "..."; // Enter Project Decription
