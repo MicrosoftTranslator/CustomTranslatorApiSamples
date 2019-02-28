@@ -1,9 +1,9 @@
 
 Overview
 =============
-This sample code provides guidance on how to use the Custom Translator API using ASP.NET MVC application. Refer to [Custom Translator documentation](https://docs.microsoft.com/en-gb/azure/cognitive-services/translator/custom-translator/overview) to know more about different features of Custom Translator. 
+This sample code provides guidance on how to use the Custom Translator API (preview) using ASP.NET MVC application. Refer to [Custom Translator documentation](https://docs.microsoft.com/en-gb/azure/cognitive-services/translator/custom-translator/overview) to know more about different features of Custom Translator. 
 
-Custom Translator API documentation can be found [here](https://custom-api.cognitive.microsofttranslator.com/swagger/).
+Custom Translator API (preview) documentation can be found [here](https://custom-api.cognitive.microsofttranslator.com/swagger/).
 
 Please contact <custommt@microsoft.com> for questions and support.
 
