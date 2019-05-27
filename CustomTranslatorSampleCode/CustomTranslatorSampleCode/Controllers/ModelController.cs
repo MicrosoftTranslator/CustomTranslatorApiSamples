@@ -76,7 +76,7 @@ namespace CustomTranslatorSampleCode.Controllers
             model.name = "..."; // Enter model name
             model.projectId = "..."; // Enter project id
             model.documentIds = new List<int>();
-            model.documentIds.Add(...); // Add multiple documents using DocumentID. DocumentID is int.
+            model.documentIds.Add(1); // Add multiple documents using DocumentID. DocumentID is int.
             model.isTuningAuto = true; // Enter if tuning set will be set to auto. values = true, false
             model.isTestingAuto = true; // Enter if testing set will be set to auto. values = true, false
             model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
