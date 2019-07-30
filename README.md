@@ -14,45 +14,29 @@ Create and Register your Azure AD Client App
 --------------------------------------------
 
 This sample code uses OAuth and OpenID for authentication. Please sign in to
-<https://apps.dev.microsoft.com> with the same user credentials you use to login
+<https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade> with the same user credentials you use to login
 to Custom Translator. The landing page shows the list of client apps that are
 created/ available to use with your account.
 
-Create an app using **Add an app** button at top right-hand corner of the landing
-page.
+1. Click “New Registration” in the top left corner as in screenshot
 
-![My applications](media/a7247b6a16b3f4151e06661514e03c17.png)
+![App Registration](media/App_registrations.png)
 
-Enter application name and click on **Create**.
+2. Enter a unique name for the App ID
 
-![Client app registration](media/e90a645b51ab87c3be1002ea553beae1.png)
+3. Select the account type. If you are not sure, click “Help me choose…” to read more on each type.
 
-Generate a new password and keep it safe. This is the **Application Secret**, and
-will be used in the application for authentication.
+4. In the redirect URI section, note the following:
 
-![Generate secret](media/7af76b36b33c6fb891f6b81a279876d5.png)
+5. For the MVC web application, select “Web” and enter the Redirect URLs for the web platform. This URL is where your MVC web app should redirect after authentication. You can change Redirect URLs based on your application configuration.
 
-When an application is created, the default delegated permission for it are **User.Read**.
-Add two additional delegated permissions 
-- **offline_access** 
-- **openid**.
+6. Click Register. At this point, you will be directed to an overview page with details about your AppID.
 
-Go to **Microsoft Graph Permissions**, the **Delegated Permissions** in the page to add these permissions.
+7. Navigate to Certificates and Secrets and click “New client secret”
 
-![Client app settings](media/80019947a3cce059868f06af8c3ade64.png)
+![Client secrets](media/Client_secrets.png)
 
-For the MVC web application, a new “Web” platform needs to be added from
-“Platforms” section of the page.
-
-Enter the **Redirect URLs** for the web platform. This URL is where your MVC web app
-should redirect after authentication. You can change Redirect URLs based on your application configuration.
-
-![Client app platform](media/569a20d01ecc065a7c7e2dda1d71c2f8.png)
-
-Now save the changes you made and the portal will take you to the landing page,
-where all your registered applications are listed. The **App Id/ Client ID** listed here will be used to authenticate in the MVC web app.
-
-![Client app ID](media/b62f689c2a22aadc75c50be3f1e4e054.png)
+This secret along with App ID will be used for authentication as described in “Setup MVC App Code”
 
 Provide Consent and Accept Terms
 --------------------------------
