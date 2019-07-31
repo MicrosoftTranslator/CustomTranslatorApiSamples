@@ -28,11 +28,13 @@ created/ available to use with your account.
 
 4. In the redirect URI section, note the following:
 
-5. For the MVC web application, select “Web” and enter the Redirect URLs for the web platform. This URL is where your MVC web app should redirect after authentication. You can change Redirect URLs based on your application configuration.
+* For the MVC web application, select “Web” and enter the Redirect URLs for the web platform. 
+* This URL is where your MVC web app should redirect after authentication. 
+* You can change Redirect URLs based on your application configuration.
 
-6. Click Register. At this point, you will be directed to an overview page with details about your AppID.
+5. Click Register. At this point, you will be directed to an overview page with details about your AppID.
 
-7. Navigate to Certificates and Secrets and click “New client secret”
+6. Navigate to Certificates and Secrets and click “New client secret”
 
 ![Client secrets](media/Client_secrets.png)
 
