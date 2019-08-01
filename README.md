@@ -38,7 +38,11 @@ created/ available to use with your account.
 
 ![Client secrets](media/Client_secrets.png)
 
-This secret along with App ID will be used for authentication as described in “Setup MVC App Code”
+   This secret along with App ID will be used for authentication as described in “Setup MVC App Code”
+
+7. Navigate to API permissions and click Add permission – Select Microsoft Graph and choose the delegated permissions as shown in screenshot
+
+![Permissions](media/Permissions.png)
 
 Provide Consent and Accept Terms
 --------------------------------
