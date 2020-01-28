@@ -7,7 +7,7 @@ namespace CustomTranslatorSampleCode
 {
     public class Helper
     {
-        public async Task<string> DownlaodFile(HttpResponseMessage response)
+        public async Task<string> DownloadFile(HttpResponseMessage response)
         {
             string filedownloadpath = "";
             string downloadedfilename = "";

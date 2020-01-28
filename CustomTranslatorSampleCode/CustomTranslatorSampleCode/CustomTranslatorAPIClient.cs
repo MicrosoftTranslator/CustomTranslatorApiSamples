@@ -572,7 +572,7 @@ namespace CustomTranslatorSampleCode
                 response.EnsureSuccessStatusCode();
                 RestRequest r = new RestRequest();
                 Helper helper = new Helper();
-                string downloadpath = await helper.DownlaodFile(response);
+                string downloadpath = await helper.DownloadFile(response);
                 result = "File downloaded at " + downloadpath;
             }
             catch (Exception e)

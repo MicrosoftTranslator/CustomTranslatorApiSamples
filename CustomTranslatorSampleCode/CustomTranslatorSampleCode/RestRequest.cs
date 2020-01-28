@@ -50,7 +50,7 @@ namespace CustomTranslatorSampleCode
                     {
                         HttpResponseMessage response = await client.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead);
                         Helper helper = new Helper();
-                        string downloadpath = await helper.DownlaodFile(response);
+                        string downloadpath = await helper.DownloadFile(response);
                         return "File downloaded at " + downloadpath;
                     }
                     else
