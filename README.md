@@ -41,6 +41,8 @@ created/ available to use with your account.
    This secret along with App ID will be used for authentication as described in “Setup MVC App Code”
 
 7. Navigate to API permissions and click Add permission – Select Microsoft Graph and choose the delegated permissions as shown in screenshot
+8. Navigate to API Authentication and enable ID tokens ![image](https://user-images.githubusercontent.com/75703661/154596452-4b057e90-6d15-4125-aac1-3586c5c8e7b6.png)
+
 
 ![Permissions](media/Permissions.png)
 
@@ -71,7 +73,7 @@ Run Visual Studio, open CustomTranslatorSampleCode.sln and expand CustomTranslat
 In Controllers folder open **HomeController.cs**, and update following code:
 
 1. **clientID**: update this value with the App Id/Client ID listed in Application Registration Portal.
-2. **clientsecret**: update this value with your App’s secret/ password.
+2. **clientsecret**: update this value with the value of your App's secret. Use the value and **not** the secret description or the secret ID.
 3. **redirectUri**: update it as per your MVC app’s URL.
 
 ![Variables](media/d1458ea2a714990ad437a0a09cc89fbd.png)
