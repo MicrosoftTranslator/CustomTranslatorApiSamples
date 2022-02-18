@@ -44,6 +44,9 @@ created/ available to use with your account.
 
 ![Permissions](media/Permissions.png)
 
+8. Navigate to API Authentication and enable ID tokens ![image](https://user-images.githubusercontent.com/75703661/154597021-5c998b0d-2e9a-4d65-b46a-5c974f7e9c05.png)
+
+
 Provide Consent and Accept Terms
 --------------------------------
 
@@ -71,7 +74,7 @@ Run Visual Studio, open CustomTranslatorSampleCode.sln and expand CustomTranslat
 In Controllers folder open **HomeController.cs**, and update following code:
 
 1. **clientID**: update this value with the App Id/Client ID listed in Application Registration Portal.
-2. **clientsecret**: update this value with your App’s secret/ password.
+2. **clientsecret**: update this value with the value of your App's secret. Use the value and **not** the secret description or the secret ID.
 3. **redirectUri**: update it as per your MVC app’s URL.
 
 ![Variables](media/d1458ea2a714990ad437a0a09cc89fbd.png)
