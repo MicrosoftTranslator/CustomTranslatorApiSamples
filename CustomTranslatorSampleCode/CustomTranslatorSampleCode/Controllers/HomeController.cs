@@ -7,6 +7,7 @@ using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Net;
 
 namespace CustomTranslatorSampleCode.Controllers
 {
@@ -14,11 +15,11 @@ namespace CustomTranslatorSampleCode.Controllers
     public class HomeController : Controller
     {
         static string tenant = "common"; // Tenant for Custom Translator
-        static string clientID = "..."; // Enter your ClientID that you created in https://apps.dev.microsoft.com 
+        static string clientID = "..."; // Enter your ClientID (Application ID) that you created in https://portal.azure.com in the client app registration
         static string redirectUri = "http://localhost:64179/home/index1"; // Ensure this URL is added to the Redirect URLs section (Platform = Web) for your client app
         static string clientsecret = "..."; // Enter App Secret for your client app
         static string authorityUri = $"https://login.microsoftonline.com/{tenant}/oauth2/v2.0";  
-        static string resourceUri = "api://6981666b-e0e0-47d6-a039-35318677bf79/access_as_user"; 
+        static string resourceUri = "api://custom-api.cognitive.microsofttranslator.com/access_as_user"; 
 
         [HttpGet]
         public ActionResult Index()
@@ -57,6 +58,7 @@ namespace CustomTranslatorSampleCode.Controllers
             Session["token_header"] = token_header;
             Session["ws_id"] = "..."; // Enter your Workspace Id
 
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
             return View();
         }
