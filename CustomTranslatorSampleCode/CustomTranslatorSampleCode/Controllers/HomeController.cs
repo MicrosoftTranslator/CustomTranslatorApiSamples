@@ -19,7 +19,7 @@ namespace CustomTranslatorSampleCode.Controllers
         static string redirectUri = "http://localhost:64179/home/index1"; // Ensure this URL is added to the Redirect URLs section (Platform = Web) for your client app
         static string clientsecret = "..."; // Enter App Secret for your client app
         static string authorityUri = $"https://login.microsoftonline.com/{tenant}/oauth2/v2.0";  
-        static string resourceUri = "api://72876cf4-6a8f-4e0f-b161-b34c56f0b509/access_as_user"; 
+        static string resourceUri = "api://custom-api.cognitive.microsofttranslator.com/access_as_user"; 
 
         [HttpGet]
         public ActionResult Index()
