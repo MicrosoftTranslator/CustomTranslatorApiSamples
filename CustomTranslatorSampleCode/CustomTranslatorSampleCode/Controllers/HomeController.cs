@@ -42,6 +42,8 @@ namespace CustomTranslatorSampleCode.Controllers
         [HttpPost]
         public async Task<ActionResult> Index1()
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             string form = Request.Form.ToString();
             var activationCode = this.Request.Form["code"].ToString();
             var url = $"{authorityUri}/token";
@@ -58,7 +60,7 @@ namespace CustomTranslatorSampleCode.Controllers
             Session["token_header"] = token_header;
             Session["ws_id"] = "..."; // Enter your Workspace Id
 
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
             return View();
         }
