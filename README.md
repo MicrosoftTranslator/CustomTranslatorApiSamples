@@ -5,7 +5,7 @@ This sample code provides guidance on how to use the Custom Translator API (prev
 
 Custom Translator API (preview) documentation can be found [here](https://custom-api.cognitive.microsofttranslator.com/swagger/).
 
-Please contact <custommt@microsoft.com> for questions and support.
+For support, please select the 'Issues' tab at the top of the page and submit your request.
 
 Prerequisites
 =============
