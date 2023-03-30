@@ -75,11 +75,9 @@ namespace CustomTranslatorSampleCode.Controllers
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
             
             string workspaceId = "..."; // Enter Workspace Id
-
             string filepath = @"..."; // Enter local path for combo file
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
-
             documentdetails.DocumentName = "..."; // Enter document name
             documentdetails.DocumentType = "training"; //values = training/ tuning/ testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false

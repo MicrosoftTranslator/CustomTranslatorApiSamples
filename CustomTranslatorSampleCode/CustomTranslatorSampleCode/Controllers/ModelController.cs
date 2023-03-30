@@ -69,7 +69,7 @@ namespace CustomTranslatorSampleCode.Controllers
             model.isTuningAuto = true; // Enter if tuning set will be set to auto. values = true, false
             model.isTestingAuto = true; // Enter if testing set will be set to auto. values = true, false
             model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
-            model.isAutoTrain = true; // Enter the value of auto deploy threshold value
+            model.isAutoTrain = true; // Enter if this model will be automatically trained. values = true, false. If False, will be saved as draft
 
             string result = await clientapp.GetProject(model.projectId);
             Project project = getProjectDetail(result);
