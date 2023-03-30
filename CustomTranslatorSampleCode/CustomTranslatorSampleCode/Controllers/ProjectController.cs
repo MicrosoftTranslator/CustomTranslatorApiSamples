@@ -18,37 +18,33 @@ namespace CustomTranslatorSampleCode.Controllers
 
         public async Task<ActionResult> Create()
         {
-            string token_header = null;
-
-            if (Session["token_header"] != null)
-            {
-                token_header = Session["token_header"].ToString();
-            }
-
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
+
+            string workspaceId = "..."; // Enter Workspace Id
 
             ProjectCreateRequest newproject = new ProjectCreateRequest();
             newproject.name = "..."; // Enter Project Name
-            newproject.languagePairId = 18; //Determined from the call to GetLanguagePairs
+            newproject.languagePairId = 1; //Determined from the call to GetLanguagePairs
             newproject.categoryid = 1; //Determined from the call to GetCategories 
             newproject.categoryDescriptor = "..."; // Enter Project Category Descriptor
             newproject.label = "..."; // Enter Project Label
             newproject.description = "..."; // Enter Project Decription
 
-            string categoryresult = await clientapp.GetCategories(token_header);
+            string categoryresult = await clientapp.GetCategories();
             List<Category> categorylist = getCategoryList(categoryresult);
             Category category = categorylist.Find(c => c.id == newproject.categoryid);
 
-            string lpresult = await clientapp.GetLanguagePairs(token_header);
+            string lpresult = await clientapp.GetLanguagePairs();
             List<LanguagePair> languagePairList = getLanguagePairList(lpresult);
             LanguagePair languagePair = languagePairList.Find(lp => lp.id == newproject.languagePairId);
 
-            string result = await clientapp.CreateProject(token_header, newproject, Session["ws_id"].ToString()); 
+            string result = await clientapp.CreateProject(newproject, workspaceId); 
             string[] resultarray = result.Split('/');
 
             if (resultarray.Length > 1)
             {
                 string newprojectid = resultarray[resultarray.Length - 1];
+                Response.Write("<div class=\"jumbotron\">");
                 Response.Write("<br/>New Project Created");
                 Response.Write("<br/>Project Id: " + newprojectid);
                 Response.Write("<br/>Project Name: " + newproject.name);
@@ -56,13 +52,14 @@ namespace CustomTranslatorSampleCode.Controllers
                 Response.Write("<br/>Project Category: " + category.name);
                 Response.Write("<br/>Project Label: " + newproject.label);
                 Response.Write("<br/>Project Description: " + newproject.description);
+                Response.Write("</div>");
             }
             else
             {
                 Response.Write("<br/>Could not create project: " + result);
             }
 
-            return View();
+            return View(); 
         }
 
         static List<Category> getCategoryList(string result)

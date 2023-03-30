@@ -14,26 +14,9 @@ namespace CustomTranslatorSampleCode
             headers.Add(name, value);
         }
 
-        bool IsAuthTokenSet()
-        {
-            if (!headers.TryGetValue("Authorization", out authtoken))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         public async Task<string> GetRestRequest(string uri, bool isfiledownload = false)
         {
             string result = "";
-
-            if (!IsAuthTokenSet())
-            {
-                return "Subscription Key is must";
-            }
 
             //Create HTTP Client 
             using (HttpClient client = new HttpClient())
@@ -73,11 +56,6 @@ namespace CustomTranslatorSampleCode
         {
             string result = "";
 
-            if (!IsAuthTokenSet())
-            {
-                return "Subscription Key is must";
-            }
-
             //Create HTTP Client 
             using (HttpClient client = new HttpClient())
             {
@@ -105,11 +83,6 @@ namespace CustomTranslatorSampleCode
         {
             string result = "";
 
-            if (!IsAuthTokenSet())
-            {
-                return "Subscription Key is must";
-            }
-
             //Create HTTP Client 
             using (HttpClient client = new HttpClient())
             {
@@ -136,11 +109,6 @@ namespace CustomTranslatorSampleCode
         public async Task<string> DeleteRestRequest(string uri)
         {
             string result = "";
-
-            if (!IsAuthTokenSet())
-            {
-                return "Subscription Key is must";
-            }
 
             //Create HTTP Client 
             using (HttpClient client = new HttpClient())
