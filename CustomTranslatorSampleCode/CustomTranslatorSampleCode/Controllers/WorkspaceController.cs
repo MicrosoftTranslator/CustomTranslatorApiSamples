@@ -22,17 +22,20 @@ namespace CustomTranslatorSampleCode.Controllers
         {
             var clientapp = new CustomTranslatorAPIClient();
 
+            string billingRegionResult = await clientapp.GetBillingRegions();
+            List<BillingRegionDetails> billingRegionList = getBillingRegionList(billingRegionResult);
+
+            var translatorResource_Location = "...";  // Enter resource location for the translator resource, can be found on overview page of the resource on the azure portal. eg: 'West US 2'
+            var translatorResource_SubscriptionKey = "...";  // Enter your resource subscription_key, you can fetch it from the "Keys and Endpoint" tab in the translator resource on azure portal
+            BillingRegionDetails billingRegion = billingRegionList.Find(c => c.billingRegionName == translatorResource_Location);
+
             WorkspaceCreateRequest newWorkspace = new WorkspaceCreateRequest();
             newWorkspace.Name = "..."; // Enter workspace name
             newWorkspace.Subscription = new Subscription()
             {
-                SubscriptionKey = "...",  // Enter your subscription_key, you can fetch it from the "Keys and Endpoint" tab in the translator resource 
-                BillingRegionCode = "...", // Enter billing region for the subscription, can be found on the azure portal. The code is determinded in the GetBillingRegions, eg: WEU
+                SubscriptionKey = translatorResource_SubscriptionKey,  
+                BillingRegionCode = billingRegion.billingRegionCode, 
             };
-
-            string billingRegionResult = await clientapp.GetBillingRegions();
-            List<BillingRegionDetails> billingRegionList = getBillingRegionList(billingRegionResult);
-            BillingRegionDetails billingRegion = billingRegionList.Find(c => c.billingRegionCode == newWorkspace.Subscription.BillingRegionCode);
 
             string result = await clientapp.CreateWorkspace(newWorkspace);
             string[] resultarray = result.Split('/');
