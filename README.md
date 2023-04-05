@@ -20,22 +20,29 @@ Run Visual Studio, open CustomTranslatorSampleCode.sln and expand CustomTranslat
 
 In **CustomTranslatorAPIClient.cs** update the following code:
 
-1. **subscription_key**: update this value with the subscription key from the Translator resource in the azure portal.
+1. **subscription_key**: update this value with one of the subscription keys of your translator resource, you can fetch it from the "Keys and Endpoint" tab in the translator resource on azure portal
 2. **resource_name**: update this value with your Translator resource's name.
 
 ![Resource details](media/update_resource_details.png)
 
 In Controllers folder open WorkspaceController.cs, and update following code:
 
-1. **newWorkspace.Name**: update this value with desired workspace name.
-2. **SubscriptionKey**: update this value with the subscription key from the Translator resource in the azure portal.
-3. **BillingRegionCode**: Enter billing region for the subscription, can be found on the azure portal. The code is determinded in the GetBillingRegions, eg: GBL, WEU, USW2, USC, etc...
+1. **translatorResource_Location**: Update this value with the location for your translator resource, can be found on overview page of the resource on the azure portal. eg: 'West US 2'
+2. **translatorResource_SubscriptionKey**: update this value with one of the subscription keys of your translator resource, you can fetch it from the "Keys and Endpoint" tab in the translator resource on azure portal
+3. **newWorkspace.Name**: update this value with desired workspace name.
 
 ![Workspace details](media/update_workspace_details.png)
 
-In Controllers folder open **ProjectController.cs**, go to **Index()** method and update following code:
+To create the workspace, start the project in Visual Studio
+In the home page, click on "Execute" to create a workspace. This will give you the **WorkspaceId**
 
-1. **workspaceId**: update this value with your workspace Id.
+![Execute create workspace](media/execute_workspace.png)
+
+Follow the same procedure to execute the changes after each code update.
+
+In Controllers folder open **ProjectController.cs**, go to **Create()** method and update following code:
+
+1. **workspaceId**: update this value with your workspace Id. You can get this by running the "
 2. **newproject.name**: update this value desired project name.
 3. **newproject.languagePairId**: update this value with appropriate language pair id.
 4. **newproject.categoryid**: update this value with appropriate category id.
