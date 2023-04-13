@@ -31,6 +31,7 @@ namespace CustomTranslatorSampleCode.Controllers
 
             WorkspaceCreateRequest newWorkspace = new WorkspaceCreateRequest();
             newWorkspace.Name = "..."; // Enter workspace name
+            newWorkspace.isSecured = false;  // To restrict access to published models in this workspace, set it true
             newWorkspace.Subscription = new Subscription()
             {
                 SubscriptionKey = translatorResource_SubscriptionKey,  
