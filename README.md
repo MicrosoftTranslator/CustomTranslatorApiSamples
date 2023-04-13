@@ -15,6 +15,9 @@ Follow the instructions [here](https://learn.microsoft.com/en-gb/azure/cognitive
 
 Setup MVC App Code
 ==================
+| :warning: WARNING          |
+|:---------------------------|
+| Custom Translator non-interactive API is designed for automated workflows. Once the workspace is created with the API, you cannot view it in Custom Translator Portal. To be able to see the workspace, projects, documents, and models, you should create the workspace using [Custom Translator portal](https://portal.customtranslator.azure.ai/) first then use the API with the workspace Id to upload documents, create projects and train models.   |
 
 Run Visual Studio, open CustomTranslatorSampleCode.sln and expand CustomTranslatorSampleCode.
 
