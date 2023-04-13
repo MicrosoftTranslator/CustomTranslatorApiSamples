@@ -6,6 +6,7 @@ namespace CustomTranslatorSampleCode
     public class WorkspaceCreateRequest
     {
         public string Name { get; set; }
+        public bool isSecured { get; set; }
         public Subscription Subscription { get; set; }
     }
 
