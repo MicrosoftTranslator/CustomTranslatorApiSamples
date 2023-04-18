@@ -3,6 +3,19 @@ using System.Collections.Generic;
 
 namespace CustomTranslatorSampleCode
 {
+    public class WorkspaceCreateRequest
+    {
+        public string Name { get; set; }
+        public bool isSecured { get; set; }
+        public Subscription Subscription { get; set; }
+    }
+
+    public class Subscription
+    {
+        public string SubscriptionKey { get; set; }
+        public string BillingRegionCode { get; set; }
+    }
+
     public class ProjectCreateRequest
     {
         public string name { get; set; }
@@ -31,7 +44,7 @@ namespace CustomTranslatorSampleCode
     public class FileForImportRequest
     {
         public string Name { get; set; }
-        public string Language { get; set; }
+        public string LanguageCode { get; set; }
         public string Type { get; set; }
         public bool OverwriteIfExists { get; set; }
     }
@@ -44,7 +57,7 @@ namespace CustomTranslatorSampleCode
         public bool isTuningAuto { get; set; }
         public bool isTestingAuto { get; set; }
         public bool isAutoDeploy { get; set; }
-        public float autoDeployThreshold { get; set; }
+        public bool isAutoTrain { get; set; }
     }
 
     public class ModelEditRequest
@@ -103,6 +116,12 @@ namespace CustomTranslatorSampleCode
         public int id { get; set; }
         public Language sourceLanguage { get; set; }
         public Language targetLanguage { get; set; }
+    }
+
+    public class BillingRegionDetails
+    {
+        public string billingRegionCode { get; set; }
+        public string billingRegionName { get; set; }
     }
 
     public class CreatedBy

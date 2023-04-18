@@ -13,12 +13,6 @@ namespace CustomTranslatorSampleCode.Controllers
         // GET: Model
         public async Task<ActionResult> Index(int? id)
         {
-            string token_header = null;
-
-            if (Session["token_header"] != null)
-            {
-                token_header = Session["token_header"].ToString();
-            }
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
             if (id == null)
@@ -27,10 +21,11 @@ namespace CustomTranslatorSampleCode.Controllers
             }
 
             long modelid = (long) id;
-            string result = await clientapp.GetModel(modelid, token_header);
+            string result = await clientapp.GetModel(modelid);
 
             TrainingModel m = getTrainingDetail(result);
 
+            Response.Write("<div class=\"jumbotron\">");
             Response.Write("<br />Model Id: " + m.id);
             Response.Write("<br />Model Name: " + m.name);
             Response.Write("<br />Model Status: " + m.modelStatus);
@@ -39,8 +34,8 @@ namespace CustomTranslatorSampleCode.Controllers
             foreach (Document d in m.documents)
             {
                 Response.Write("<br/>Document Name: " + d.documentInfo.name);
-                Response.Write("<br/>Aligned Sentence Count: " + d.processedDocumentInfo.alignedSentenceCount);
-                Response.Write("<br/>Used Sentence Count: " + d.processedDocumentInfo.usedSentenceCount);
+                Response.Write("<br/>Aligned Sentence Count: " + d.processedDocumentInfo?.alignedSentenceCount);
+                Response.Write("<br/>Used Sentence Count: " + d.processedDocumentInfo?.usedSentenceCount);
 
 
                 int i = 1;
@@ -56,6 +51,7 @@ namespace CustomTranslatorSampleCode.Controllers
             Response.Write("<br />Training Sentence Count: " + m.trainingSentenceCount);
             Response.Write("<br />Tuning Sentence Count: " + m.tuningSentenceCount);
             Response.Write("<br />Testing Sentence Count: " + m.testingSentenceCount);
+            Response.Write("</div>");
 
             return View();
         }
@@ -63,34 +59,29 @@ namespace CustomTranslatorSampleCode.Controllers
 
         public async Task<ActionResult> Create()
         {
-            string token_header = null;
-
-            if (Session["token_header"] != null)
-            {
-                token_header = Session["token_header"].ToString();
-            }
-
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
             ModelCreateRequest model = new ModelCreateRequest(); // Create new object for Model and add values
             model.name = "..."; // Enter model name
             model.projectId = "..."; // Enter project id
             model.documentIds = new List<int>();
-            model.documentIds.Add(...); // Add multiple documents using DocumentID. DocumentID is int.
+            model.documentIds.Add(-1); // Add multiple documents using DocumentID. DocumentID is int.
             model.isTuningAuto = true; // Enter if tuning set will be set to auto. values = true, false
             model.isTestingAuto = true; // Enter if testing set will be set to auto. values = true, false
             model.isAutoDeploy = false; // Enter if this model will be automatically deployed. values = true, false
-            model.autoDeployThreshold = 0; // Enter the value of auto deploy threshold value
+            model.isAutoTrain = true; // Enter if this model will be automatically trained. values = true, false. If False, will be saved as draft
 
-            string result = await clientapp.GetProject(model.projectId, token_header);
+            string result = await clientapp.GetProject(model.projectId);
             Project project = getProjectDetail(result);
 
-            result = await clientapp.CreateModel(token_header, model);
+            result = await clientapp.CreateModel(model);
             string[] resultarray = result.Split('/');
 
             if (resultarray.Length > 1)
             {
                 string newtrainingid = resultarray[resultarray.Length - 1];
+
+                Response.Write("<div class=\"jumbotron\">");
                 Response.Write("<br/>New Model Created");
                 Response.Write("<br/>Model Id: " + newtrainingid);
                 Response.Write("<br/>Model Name: " + model.name);
@@ -98,7 +89,7 @@ namespace CustomTranslatorSampleCode.Controllers
                 Response.Write("<br/>Language Pair: " + project.languagePair.sourceLanguage.displayName + " to " + project.languagePair.targetLanguage.displayName);
                 foreach (int fileid in model.documentIds)
                 {
-                    result = await clientapp.GetDocument(fileid, token_header);
+                    result = await clientapp.GetDocument(fileid);
                     DocumentInfo doc = getDocumentDetail(result);
                     Response.Write("<br/>Document : " + doc.name);
                     int i = 1;
@@ -110,6 +101,7 @@ namespace CustomTranslatorSampleCode.Controllers
                         i++;
                     }
                 }
+                Response.Write("</div>");
             }
             else
             {
@@ -121,12 +113,6 @@ namespace CustomTranslatorSampleCode.Controllers
 
         public async Task<ActionResult> Deploy(int? id)
         {
-            string token_header = null;
-
-            if (Session["token_header"] != null)
-            {
-                token_header = Session["token_header"].ToString();
-            }
             if (id == null)
             {
                 return View();
@@ -138,14 +124,14 @@ namespace CustomTranslatorSampleCode.Controllers
 
             DeploymentConfiguration regionaldeployment1 = new DeploymentConfiguration();
             regionaldeployment1.region = 1; // North America = 1
-            regionaldeployment1.isDeployed = true; // true = deployment ; false = undeployment
+            regionaldeployment1.isDeployed = true; // true = deployment ; false = undeployment ; You can get these regions from the Get Regions call
 
             DeploymentConfiguration regionaldeployment2 = new DeploymentConfiguration();
             regionaldeployment2.region = 2; // Europe = 2
             regionaldeployment2.isDeployed = true; // true = deployment ; false = undeployment
 
             DeploymentConfiguration regionaldeployment3 = new DeploymentConfiguration();
-            regionaldeployment3.region = 3; // Asia Pacific
+            regionaldeployment3.region = 3; // Asia Pacific 
             regionaldeployment3.isDeployed = true; // true = deployment ; false = undeployment
 
             List<DeploymentConfiguration> deploymentconfig = new List<DeploymentConfiguration>();
@@ -153,7 +139,7 @@ namespace CustomTranslatorSampleCode.Controllers
             deploymentconfig.Add(regionaldeployment2);
             deploymentconfig.Add(regionaldeployment3);
 
-            string result = await clientapp.CreateModelDeploymentRequest(modelid, deploymentconfig, token_header);
+            string result = await clientapp.CreateModelDeploymentRequest(modelid, deploymentconfig);
             Response.Write(result);
             return View();
         }

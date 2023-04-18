@@ -20,20 +20,14 @@ namespace CustomTranslatorSampleCode.Controllers
 
         public async Task<ActionResult> ParallelFile()
         {
-            string token_header = null;
-
-            if (Session["token_header"] != null)
-            {
-                token_header = Session["token_header"].ToString();
-            }
-
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
 
             // Start upload single parallel document 
 
+            string workspaceId = "..."; // Enter Workspace Id
+
             string sourcelanguagefilepath = @"..."; // Enter local path for source language file
             string targetlanguagefilepath = @"..."; // Enter local path for target language file
-
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
 
@@ -45,70 +39,67 @@ namespace CustomTranslatorSampleCode.Controllers
 
             FileForImportRequest sourcelanguagefile = new FileForImportRequest();
             sourcelanguagefile.Name = Path.GetFileName(sourcelanguagefilepath);
-            sourcelanguagefile.Language = "..."; // Enter source language. Example: de. //Determined from the call to GetCategories 
+            sourcelanguagefile.LanguageCode = "..."; // Enter source language. Example: de. //Determined from the call to GetLanguages 
             sourcelanguagefile.OverwriteIfExists = true; // Enter if you want to overwrite if file exists. values = true, false
 
             FileForImportRequest targetlanguagefile = new FileForImportRequest();
             targetlanguagefile.Name = Path.GetFileName(targetlanguagefilepath);
-            targetlanguagefile.Language = "..."; // Enter target language. Example: en. //Determined from the call to GetCategories 
+            targetlanguagefile.LanguageCode = "..."; // Enter target language. Example: en. //Determined from the call to GetLanguages 
             targetlanguagefile.OverwriteIfExists = true; // Enter if you want to overwrite if file exists. values = true, false
 
-            string result = await clientapp.ImportDocument(token_header, Session["ws_id"].ToString(), sourcelanguagefilepath, targetlanguagefilepath, documentdetails, sourcelanguagefile, targetlanguagefile);
-
+            string result = await clientapp.ImportDocument(workspaceId, sourcelanguagefilepath, targetlanguagefilepath, documentdetails, sourcelanguagefile, targetlanguagefile);
 
             string jobId = getJobId(result.Trim());
 
+            Response.Write("<div class=\"jumbotron\">");
             Response.Write("<br /><br />JobId: " + jobId + "<br />");
 
-            result = await clientapp.GetDocumentUploadStatus(jobId, token_header);
+            result = await clientapp.GetDocumentUploadStatus(jobId);
 
             CurrentFileUploadStatus status = getUploadStatus(result);
 
             foreach (FileProcessingStatus fps in status.fileProcessingStatus)
             {
-                Response.Write("<br />File Name: " + fps.id); // Use this File Is when training a model
+                Response.Write("<br />File Id: " + fps.id); // Use this File Is when training a model
                 Response.Write("<br />File Name: " + fps.fileName);
                 Response.Write("<br />Upload Status: " + fps.status.displayName);
+                Response.Write("<br />");
             }
 
+            Response.Write("</div>");
             return View();
         }
 
         public async Task<ActionResult> ComboFile()
         {
-            string token_header = null;
-
-            if (Session["token_header"] != null)
-            {
-                token_header = Session["token_header"].ToString();
-            }
-
             CustomTranslatorAPIClient clientapp = new CustomTranslatorAPIClient();
-
+            
+            string workspaceId = "..."; // Enter Workspace Id
             string filepath = @"..."; // Enter local path for combo file
 
             DocumentDetailsForImportRequest documentdetails = new DocumentDetailsForImportRequest();
-
             documentdetails.DocumentName = "..."; // Enter document name
             documentdetails.DocumentType = "training"; //values = training/ tuning/ testing
             documentdetails.IsParallel = true; // Enter if this is a parallel document. values = true, false
             documentdetails.FileDetails = new List<FileForImportRequest>();
 
-            string result = await clientapp.ImportComboDocument(token_header, Session["ws_id"].ToString(), filepath, documentdetails);
+            string result = await clientapp.ImportComboDocument(workspaceId, filepath, documentdetails);
             string jobId = getJobId(result.Trim());
+            Response.Write("<div class=\"jumbotron\">");
             Response.Write("<br /><br />JobId: " + jobId + "<br />");
 
-            result = await clientapp.GetDocumentUploadStatus(jobId, token_header);
+            result = await clientapp.GetDocumentUploadStatus(jobId);
 
             CurrentFileUploadStatus status = getUploadStatus(result);
 
             foreach (FileProcessingStatus fps in status.fileProcessingStatus)
             {
-                Response.Write("<br />File Name: " + fps.id); // Use this File Is when training a model
+                Response.Write("<br />File Id: " + fps.id); // Use this File Is when training a model
                 Response.Write("<br />File Name: " + fps.fileName);
                 Response.Write("<br />Upload Status: " + fps.status.displayName);
             }
 
+            Response.Write("</div>");
             return View();
         }
 
