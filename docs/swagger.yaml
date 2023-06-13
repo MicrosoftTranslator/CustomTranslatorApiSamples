@@ -1170,6 +1170,64 @@ paths:
           description: The user does not have permission to access the given workspace, or it does not exist.
       security:
         - subscription_key: []
+  /api/texttranslator/v1.0/workspaces/{id}/copyauthorization:
+    get:
+      tags:
+        - Workspaces
+      summary: Gets all copy authorization for the given workspace.
+      parameters:
+        - name: id
+          in: path
+          description: Workspace Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextTranslatorWorkspaceCopyAuthorizationResponse'
+      security:
+        - subscription_key: []
+    post:
+      tags:
+        - Workspaces
+      summary: Adds copy authorization to copy model from source workspace.
+      description: With expiration time of authorization set to 24hrs by default.
+      parameters:
+        - name: id
+          in: path
+          description: The id for the workspace
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: The authorizationRequest containing the source workspace
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/TextTranslatorWorkspaceCopyAuthorizationRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TextTranslatorWorkspaceCopyAuthorizationRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/TextTranslatorWorkspaceCopyAuthorizationRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/TextTranslatorWorkspaceCopyAuthorizationRequest'
+        required: true
+      responses:
+        '201':
+          description: OK
+        '400':
+          description: The request was not formatted correctly.
+        '404':
+          description: The user does not have permission to access the given workspace, or it does not exist.
+      security:
+        - subscription_key: []
 components:
   schemas:
     Application:
@@ -2719,8 +2777,6 @@ components:
           type: string
           description: Gets or sets the Id of the project to which the target model belong
           format: uuid
-        TargetSubscription:
-          $ref: '#/components/schemas/TextTranslatorSubscriptionRequest'
       additionalProperties: false
     TextTranslatorModelInfo:
       type: object
@@ -3373,6 +3429,55 @@ components:
           nullable: true
       additionalProperties: false
       description: Result container for tests.
+    TextTranslatorWorkspaceCopyAuthorization:
+      type: object
+      properties:
+        Id:
+          type: integer
+          description: Gets or sets the Copy Authorization Id.
+          format: int64
+        TargetWorkspaceId:
+          type: string
+          description: Gets or sets the TargetWorkspaceId workspace Id.
+          nullable: true
+        SourceWorkspaceId:
+          type: string
+          description: Gets or sets the SourceWorkspaceId.
+          nullable: true
+        ExpirationTime:
+          type: string
+          description: Gets or sets ExpirtationTime.
+          format: date-time
+          nullable: true
+      additionalProperties: false
+      description: Container containing mapping of the authorized workspaces
+    TextTranslatorWorkspaceCopyAuthorizationRequest:
+      required:
+        - SourceWorkspaceId
+      type: object
+      properties:
+        SourceWorkspaceId:
+          minLength: 1
+          type: string
+          description: Gets or sets the Source workspace id, for authorizing it to copy model
+        ExpirationTime:
+          type: string
+          description: Gets or sets ExpirationTime.
+          format: date-time
+          nullable: true
+      additionalProperties: false
+      description: Class for a authorize workspace permission request.
+    TextTranslatorWorkspaceCopyAuthorizationResponse:
+      type: object
+      properties:
+        CopyAuthorization:
+          type: array
+          items:
+            $ref: '#/components/schemas/TextTranslatorWorkspaceCopyAuthorization'
+          description: Gets or sets WorkspaceMapping.
+          nullable: true
+      additionalProperties: false
+      description: A container for authorize history results.
     TextTranslatorWorkspaceInfo:
       type: object
       properties:
