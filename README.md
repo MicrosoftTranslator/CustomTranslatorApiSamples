@@ -11,7 +11,111 @@ Prerequisites
 =============
 
 Follow the instructions [here](https://learn.microsoft.com/en-gb/azure/cognitive-services/Translator/create-translator-resource) to create a translator resource. 
+You will require the resource-name and resource-key (also called subscription key)
 
+Using the API directly using CURL
+=================================
+| :warning: WARNING          |
+|:---------------------------|
+| Custom Translator non-interactive API is designed for automated workflows. Once the workspace is created with the API, you cannot view it in Custom Translator Portal. To be able to see the workspace, projects, documents, and models, you should create the workspace using [Custom Translator portal](https://portal.customtranslator.azure.ai/) first then use the API with the workspace Id to upload documents, create projects and train models.   |
+
+<h3>1. Create Workspace</h3>
+
+```bash
+curl.exe  -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/workspaces" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data "{ 'Name': '<workspace-name>', 'Subscription': { 'SubscriptionKey': '<resource-key>', 'BillingRegionCode': '<billing-region-code>' } }"
+```
+
+<h3>2. Get Workspaces</h3>
+
+```bash
+curl.exe -X GET "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/workspaces" -H "Ocp-Apim-Subscription-Key:<resource-key>" 
+```
+
+<h3>3. Get Supported LanguagePairId</h3>
+
+```bash
+curl.exe -X GET "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/languages/supportedlanguagepairs" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" 
+```
+
+<h3>4. Create Project</h3>
+
+```bash
+curl.exe  -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects?workspaceId=<workspace-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data "{ 'Name': 'project name' , 'CategoryDescriptor': 'some description', 'CategoryId': '1', 'Description': 'Test', 'Label': '', 'LanguagePairId': '1' }"
+```
+<h5>Notes:</h5>
+LanguagePairId, e.g., 1 for en-fr
+
+<h3>5. Get Projects</h3>
+
+```bash
+curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects?workspaceId=<workspace-Id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>"
+```
+
+<h3>6. Upload Documents</h3>
+
+```bash
+curl.exe -v --location "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents/import?workspaceId=<workspace Id>" --header 'Content-Type: multipart/form-data' --header 'Accept: application/json' -H "Ocp-Apim-Subscription-Key:<resource-key>" --form Files="@filename_en.txt" --form Files="@filename_de.txt" --form 'DocumentDetails="[   {  \"DocumentName\": \"Train1\",  \"DocumentType\": \"Training\",  \"FileDetails\": [ {   \"Name\": \"filename_en.txt\",   \"LanguageCode\": \"en\",   \"OverwriteIfExists\": true }, {   \"Name\": \"filename_de.txt\",   \"LanguageCode\": \"de\",   \"OverwriteIfExists\": true },   ]   } ]"'
+```
+<h5>Notes:</h5>
+DocumentType: Training, Testing, Tuning, Sentence dictionary, Phrase dictionary 
+
+<h3>7. Get Upload Status</h3>
+
+```bash
+curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents/import/jobs/<job-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>"
+```
+
+<h3>8. List Documents</h3>
+
+```bash
+curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents?pageIndex=1&workspaceId=<workspace-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>"
+```
+
+<h3>9. Get Document</h3>
+
+```bash
+curl.exe  "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents/<document-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>"
+```
+
+<h3>10. Create Model</h3>
+
+```bash
+curl.exe  -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/models" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data "{ 'Name': '<model-name>', 'ProjectId': '<project-id>',  'DocumentIds': [<document-id-1>, <document-id-2>, <document-id-n>], 'isAutoDeploy': false, 'isTestingAuto': false, 'isTuningAuto': false, 'IsAutoTrain': true }"
+```
+
+<h3>11. Get Model Status</h3>
+
+```bash
+curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/models/<model-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" 
+```
+<h5>Notes:</h5>
+category-id is "apiDomain"
+
+<h3>12. Get Publish Physical Regions</h3>
+
+```bash
+curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/regions" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" 
+```
+
+<h3>13. Deploy the Model</h3>
+
+```bash
+curl.exe -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/models/<model-id>/deployment" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data '[{"Region": 1, "IsDeployed": true }, {"Region": 2, "IsDeployed": false}, {"Region": 3, "IsDeployed": false}]'
+```
+
+<h5>Notes:</h5>
+
+  - Physical regions: North America=1, Europe=2, Aisa Pacific=3 
+  
+  - To Publish model: IsDeployed=true
+    
+  - To Unpblish model: IsDeployed=false 
+ 
+<h3>14. Get Translation with Category ID</h3>
+
+```bash
+curl.exe -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/text/v3.0/translate?api-version=3.0&from=en&to=de&category=<category-id>" -H "Ocp-Apim-Subscription-Key:<resource- key>" -H "Content-Type: application/json" -d "[{'Text':'<text to translate>'}]"
+```
 
 Setup MVC App Code
 ==================
