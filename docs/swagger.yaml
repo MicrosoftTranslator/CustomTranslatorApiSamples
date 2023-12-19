@@ -2,9 +2,6 @@ openapi: 3.0.1
 info:
   title: Microsoft Custom Translator API Preview 1.0
   description: '<b>[ Base URL: https://<name-of-your-resource>.cognitiveservices.azure.com/translator/customtranslator ]</b><br/><br/>Documentation for the Microsoft Custom Translator API<br/>C# code sample: https://github.com/MicrosoftTranslator/CustomTranslatorApiSamples'
-  contact:
-    name: Microsoft Custom Translator
-    email: custommt@microsoft.com
   version: '1.0'
 paths:
   /api/texttranslator/v1.0/categories:
