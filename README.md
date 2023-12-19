@@ -40,7 +40,7 @@ curl.exe -X GET "https://<resource-name>.cognitiveservices.azure.com/translator/
 <h3>4. Create Project</h3>
 
 ```bash
-curl.exe  -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects?workspaceId=<workspace-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data "{ 'Name': 'project name' , 'CategoryDescriptor': 'some description', 'CategoryId': '1', 'Description': 'Test', 'Label': '', 'LanguagePairId': '1' }"
+curl.exe  -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects?workspaceId=<workspace-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data "{ 'Name': '<project-name>' , 'CategoryDescriptor': '<category-description>', 'CategoryId': '1', 'Description': '<project-description>', 'Label': '', 'LanguagePairId': '1' }"
 ```
 <h5>Notes:</h5>
 LanguagePairId, e.g., 1 for en-fr
@@ -114,7 +114,7 @@ curl.exe -X POST "https://<resource-name>.cognitiveservices.azure.com/translator
 <h3>14. Get Translation with Category ID</h3>
 
 ```bash
-curl.exe -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/text/v3.0/translate?api-version=3.0&from=en&to=de&category=<category-id>" -H "Ocp-Apim-Subscription-Key:<resource- key>" -H "Content-Type: application/json" -d "[{'Text':'<text to translate>'}]"
+curl.exe -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/text/v3.0/translate?api-version=3.0&from=en&to=de&category=<category-id>" -H "Ocp-Apim-Subscription-Key:<resource- key>" -H "Content-Type: application/json" -d "[{'Text':'<text-to-translate>'}]"
 ```
 
 Setup MVC App Code
