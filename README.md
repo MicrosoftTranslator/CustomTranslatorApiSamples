@@ -48,13 +48,19 @@ LanguagePairId, e.g., 1 for en-fr
 <h3>5. Get Projects</h3>
 
 ```bash
-curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects?workspaceId=<workspace-Id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>"
+curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects?workspaceId=<workspace-id>" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>"
 ```
 
-<h3>6. Upload Documents</h3>
+<h3>6.1. Upload Documents - parallel files</h3>
 
 ```bash
-curl.exe -v --location "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents/import?workspaceId=<workspace Id>" --header 'Content-Type: multipart/form-data' --header 'Accept: application/json' -H "Ocp-Apim-Subscription-Key:<resource-key>" --form Files="@filename_en.txt" --form Files="@filename_de.txt" --form 'DocumentDetails="[   {  \"DocumentName\": \"Train1\",  \"DocumentType\": \"Training\",  \"FileDetails\": [ {   \"Name\": \"filename_en.txt\",   \"LanguageCode\": \"en\",   \"OverwriteIfExists\": true }, {   \"Name\": \"filename_de.txt\",   \"LanguageCode\": \"de\",   \"OverwriteIfExists\": true },   ]   } ]"'
+curl.exe -v --location "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents/import?workspaceId=<workspace-id>" --header 'Content-Type: multipart/form-data' --header 'Accept: application/json' -H "Ocp-Apim-Subscription-Key:<resource-key>" --form Files="@filename_en.txt" --form Files="@filename_de.txt" --form 'DocumentDetails="[   {  \"DocumentName\": \"Train1\",  \"DocumentType\": \"Training\",  \"FileDetails\": [ {   \"Name\": \"filename_en.txt\",   \"LanguageCode\": \"en\",   \"OverwriteIfExists\": true }, {   \"Name\": \"filename_de.txt\",   \"LanguageCode\": \"de\",   \"OverwriteIfExists\": true }   ]   } ]"'
+```
+
+<h3>6.2. Upload Documents - translation memory (TM)</h3>
+
+```bash
+curl.exe --location 'https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/documents/import?workspaceId=<workspace-id>' --header 'Content-Type: multipart/form-data' --header 'Accept: application/json' -H "Ocp-Apim-Subscription-Key:<resource-key>" --form 'DocumentDetails="[{\"DocumentName\": \"online-sentence-dictionary\",\"DocumentType\": \"Sentence dictionary\", \"FileDetails\": [{\"Name\":\"sentfix.xlsx\",\"LanguageCode\": \"en\",\"OverwriteIfExists\": true}]}]"' --form 'Files=@"C:\temp\sentfix.xlsx"'
 ```
 <h5>Notes:</h5>
 DocumentType: Training, Testing, Tuning, Sentence dictionary, Phrase dictionary 
@@ -101,6 +107,24 @@ curl.exe   "https://<resource-name>.cognitiveservices.azure.com/translator/custo
 
 ```bash
 curl.exe -X POST "https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/models/<model-id>/deployment" --header "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key:<resource-key>" --data '[{"Region": 1, "IsDeployed": true }, {"Region": 2, "IsDeployed": false}, {"Region": 3, "IsDeployed": false}]'
+```
+
+<h3>14. Delete the Model (must be in undeployed state)</h3>
+
+```bash
+curl.exe --location --request DELETE 'https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/models/<model-id>'
+```
+
+<h3>15. Delete the Project (should not have model in deployed state)</h3>
+
+```bash
+curl.exe --location --request DELETE 'https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/projects/<project-id>'
+```
+
+<h3>16. Delete the Workspace (should not have any model in deployed state)</h3>
+
+```bash
+curl.exe --location --request DELETE 'https://<resource-name>.cognitiveservices.azure.com/translator/customtranslator/api/texttranslator/v1.0/workspaces/<workspace-id>'
 ```
 
 <h5>Notes:</h5>
