@@ -148,7 +148,7 @@ paths:
                   $ref: '#/components/schemas/TextTranslatorFileInfo'
       security:
         - subscription_key: []
-  /api/texttranslator/v1.0/documents/{id}/files/{fileid}/content:
+  /api/texttranslator/v1.0/documents/{id}/files/{fileId}/content:
     get:
       tags:
         - Documents
@@ -265,7 +265,7 @@ paths:
           description: Not Found
       security:
         - subscription_key: []
-  /api/texttranslator/v1.0/documents/import/jobs/{jobid}:
+  /api/texttranslator/v1.0/documents/import/jobs/{jobId}:
     get:
       tags:
         - Documents
