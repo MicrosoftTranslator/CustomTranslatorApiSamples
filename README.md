@@ -3,8 +3,6 @@ Overview
 =============
 This sample code provides guidance on how to use the Custom Translator API (preview) using ASP.NET MVC application. Refer to [Custom Translator documentation](https://docs.microsoft.com/en-gb/azure/cognitive-services/translator/custom-translator/overview) to know more about different features of Custom Translator. 
 
-Custom Translator API (preview) documentation can be found [here](https://microsofttranslator.github.io/CustomTranslatorApiSamples).
-
 For support, please select the 'Issues' tab at the top of the page and submit your request.
 
 Prerequisites
