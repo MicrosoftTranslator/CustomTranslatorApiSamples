@@ -106,7 +106,7 @@ namespace CustomTranslatorSampleCode
         /// <param name="filters">OData $filter parameter.</param>
         public async Task<string> GetModelTests(long id, int pageindex, string filters = "")
         {
-            string apipath = $"/api/texttranslator/v1.0/models/{id}/tests?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}";
+            string apipath = $"/api/texttranslator/v1.0/models/{id}/tests?$filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}";
             string uri = host + apipath;
             RestRequest request = new RestRequest();
             request.AddHeader("Ocp-Apim-Subscription-Key", subscription_key);
@@ -135,7 +135,7 @@ namespace CustomTranslatorSampleCode
         /// <param name="orderby"></param>
         public async Task<string> GetProjects(string workspaceid, int pageindex, string filters = "", string orderby = "")
         {
-            string apipath = $"/api/texttranslator/v1.0/projects?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";
+            string apipath = $"/api/texttranslator/v1.0/projects?$filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";
             string uri = host + apipath;
             RestRequest request = new RestRequest();
             request.AddHeader("Ocp-Apim-Subscription-Key", subscription_key);
@@ -209,7 +209,7 @@ namespace CustomTranslatorSampleCode
         /// <param name="orderby">To sort the returned results please use the standard OData $orderby syntax.</param>
         public async Task<string> GetDocuments(int pageindex, string workspaceid, string filters = "", string orderby = "")
         {
-            string apipath = $"/api/texttranslator/v1.0/documents?filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";
+            string apipath = $"/api/texttranslator/v1.0/documents?$filter={Uri.EscapeUriString(filters)}&pageIndex={pageindex}&workspaceId={Uri.EscapeUriString(workspaceid)}&$orderby={Uri.EscapeUriString(orderby)}";
             string uri = host + apipath;
             RestRequest request = new RestRequest();
             request.AddHeader("Ocp-Apim-Subscription-Key", subscription_key);
